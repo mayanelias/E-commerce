@@ -55,7 +55,8 @@ Content-Type: application/json
 ###
 GET http://localhost:8080/carts
 ###
-GET http://localhost:8080/carts/61893c91e5cf7ed1f282a46c
+GET http://localhost:8080/carts/61905070d1086793756a86a0
+
 ###
 PATCH http://localhost:8080/carts/add
 Content-Type: application/json

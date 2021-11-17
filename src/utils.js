@@ -2,7 +2,7 @@ const products = require("../public/js/main");
 const MongoDB = require("mongodb");
 const path = require("path");
 const express = require("express");
-require("dotenv").config();
+require("dotenv").config({path:"../.env"});
 const app = express();
 app.use(express.json());
 const publicPath = path.join(__dirname,"..","public");
@@ -12,7 +12,7 @@ const collectionContacts = "contacs";
 const collectionCarts = "carts";
 const MongoClient = MongoDB.MongoClient;
 const ObjectId = MongoDB.ObjectId;
-const url =process.env.MONGO_URL||"mongodb://localhost:27017/";
+const url =process.env.MONGO_URL;
 // function insertProducts(req, res) {
 //     MongoClient.connect(url, function (err, db) {
 //       if (err) throw err;
@@ -258,7 +258,7 @@ function getCartById(req, res) {
   });
 }
 function addToCart(req, res) {
-  const id = "61893c91e5cf7ed1f282a46c"
+  const id = "61905070d1086793756a86a0"
   const product = req.body
   MongoClient.connect(url, function (err, db) {
     if (err) throw err;
@@ -279,7 +279,7 @@ function addToCart(req, res) {
 });
 }
 function deleteFromCart(req, res) {
-  const id = "61893c91e5cf7ed1f282a46c"
+  const id = "61905070d1086793756a86a0"
   const product = req.body
   MongoClient.connect(url, function (err, db) {
     if (err) throw err;

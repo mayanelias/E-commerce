@@ -1,7 +1,8 @@
 const express = require("express"),
-  app = express(),
-  PORT = 8080;
+app = express();
 const utils=require("./utils");
+require("dotenv").config();
+const PORT = process.env.PORT;
 const path = require("path");
 const publicPath = path.join(__dirname,"..","public");
 app.use(express.json());
@@ -60,5 +61,6 @@ app.post("/contacts", (req, res) => {
 });
 
 app.listen(PORT, () => {
+  console.log("process.env",process.env.MONGO_URL);
   console.log(`app is listening on: ${PORT}`);
 });

@@ -56,6 +56,7 @@ function removeItems(i) {
   axios
     .patch("/carts/delete", { cartId: arrayCart[i].cartId })
     .then(function (response) {
+      window.setTimeout(function(){location.reload()},0);
       console.log(response.data);
     })
     .catch(function (error) {

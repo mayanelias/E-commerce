@@ -48,7 +48,7 @@
         <option value="jewelry&accessories">jewelry&accessories</option>
         <option value="paintings">paintings</option>
         </select>
-                <input id="id" type="number" required placeholder="id"><br>
+                <input id="id" type="number"  placeholder="id"><br>
                 <input id="name" type="text" required placeholder="name"><br>
                 <input id="price" type="number" required placeholder="price"><br>
                 <select name="size" id="size">
@@ -111,6 +111,7 @@
                     
                 })
                 .then(function (response) {
+                alert("Added");
                     console.log(response.data);
                 })
                 .catch(function (error) {

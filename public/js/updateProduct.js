@@ -25,6 +25,7 @@ function updateProduct(e) {
       image2: image2,
     })
     .then(function (response) {
+    alert("Updated");
       console.log(idNum);
       console.log(response.data);
     })

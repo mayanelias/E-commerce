@@ -127,6 +127,7 @@ function addProductToCart(i) {
         description:arrayHomeLiving[i].description
     })
     .then(function (response) {
+        alert("Added To The Cart");
         console.log(response.data);
     })
     .catch(function (error) {

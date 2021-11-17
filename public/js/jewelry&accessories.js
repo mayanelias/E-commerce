@@ -179,6 +179,7 @@ function addProductToCart(i) {
     })
     .then(function (response) {
         console.log(response.data);
+        alert("Added To The Cart");
     })
       .catch(function (error) {
           console.log(error);
